@@ -1,0 +1,17 @@
+{
+  "name": "discounts-service",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "NODE_ENV=development node src/index.js",
+    "start": "node -r dotenv/config src/index.js"
+  },
+  "dependencies": {
+    "dotenv": "^17.2.2",
+    "express": "^4.19.2",
+    "mongoose": "^8.6.0",
+    "pino": "^9.2.0",
+    "pino-http": "^10.3.0"
+  }
+}

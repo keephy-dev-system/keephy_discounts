@@ -1,0 +1,11 @@
+{
+  "openapi": "3.0.3",
+  "info": { "title": "discounts-service", "version": "0.1.0" },
+  "paths": {
+    "/health": { "get": { "responses": { "200": { "description": "ok" } } } },
+    "/ready": { "get": { "responses": { "200": { "description": "ready" }, "503": { "description": "not ready" } } } },
+    "/discounts/{accessKey}": { "get": { "parameters": [{ "name": "accessKey", "in": "path", "required": true, "schema": { "type": "string" } }], "responses": { "200": { "description": "ok" }, "404": { "description": "not found" } } } },
+    "/discounts/mark-used": { "post": { "requestBody": { "required": true, "content": { "application/json": { "schema": { "type": "object" } } } }, "responses": { "201": { "description": "ok" }, "409": { "description": "email once" }, "429": { "description": "device cooldown" } } } }
+  }
+}
+
